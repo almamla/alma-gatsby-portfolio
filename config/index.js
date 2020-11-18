@@ -21,7 +21,7 @@ module.exports = {
     socialMedia: [
         {
             name: "Linkedin",
-            url: "https://www.linkedin.com/in/konstantin-muenster/"
+            url: "https://www.linkedin.com/in/alma-liping-yan-78023b133/"
         },
         {
             name: "Medium",
