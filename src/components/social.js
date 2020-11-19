@@ -73,7 +73,7 @@ const StyledSocialProfile = styled.a`
   background: ${({ theme }) => theme.colors.background};
   background: linear-gradient(
     to right,
-    ${({ theme }) => theme.colors.primary} 50%,
+    ${({ theme }) => theme.colors.random} 50%,
     ${({ theme }) => theme.colors.background} 50%
   );
   background-size: 205% 100%;

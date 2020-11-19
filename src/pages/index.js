@@ -65,6 +65,13 @@ export const pageQuery = graphql`
                 }
               }
             }
+            profile {
+              childImageSharp {
+                fluid(maxWidth: 300, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

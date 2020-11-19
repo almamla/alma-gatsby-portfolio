@@ -2,6 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 import modernNormalize from "styled-modern-normalize"
 
 const GlobalStyle = createGlobalStyle`
+
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;500&display=swap');
     
     // Import normalize.css
     ${modernNormalize}
@@ -13,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     html {
         width: 100%;
         height: 100%;
+        text-transform: lowercase;
+
     }
 
     body {
@@ -69,7 +73,7 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
         font-size: 1.25rem;
         line-height: 1.5rem;
-        color: ${({ theme }) => theme.colors.primary};
+        color: ${({ theme }) => theme.colors.random};
         @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
             font-size: 2rem;
             line-height: 3rem;
@@ -96,6 +100,10 @@ const GlobalStyle = createGlobalStyle`
         color: ${({ theme }) => theme.colors.tertiary};
         opacity: 0.1;
       }
+      
+    p {
+        font-family: ${({ theme }) => theme.fonts.secondary};
+    }
 
 `;
 

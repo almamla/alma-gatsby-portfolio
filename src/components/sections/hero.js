@@ -20,15 +20,39 @@ const StyledSection = styled.section`
 
 const StyledContentWrapper = styled(ContentWrapper)`
   && {
+    // border: pink 2px solid;
     width: 100%;
     height: 100%;
     min-height: 60vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
     margin-bottom: 6rem;
+    justify-content: space-between;
+    align-items: center;
     @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
       margin-bottom: 4rem;
+    }
+
+    .hero-left {
+      // border: blue 2px solid;
+      display:flex;
+      flex-direction: column;
+      align-items: left;
+      @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .hero-right {
+      display: hidden;
+      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        // border: yellow 2px solid;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 4rem
+      }
     }
     .greetings {
       display: flex;
@@ -58,6 +82,16 @@ const StyledContentWrapper = styled(ContentWrapper)`
       font-size: 1.125rem;
       margin-bottom: 2rem;
     }
+    .profile {
+     display: hidden;
+      @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        border: 3px solid ${({ theme }) => theme.colors.random};
+        border-radius: 50%;
+        display:flex;
+        width: 10rem;
+        height: 10rem;
+      }
+    }
   }
 `
 
@@ -72,6 +106,7 @@ const Hero = ({ content }) => {
   const eControls = useAnimation()
   const sControls = useAnimation()
   const uControls = useAnimation()
+  const pControls = useAnimation()
 
   // Start Animations after the splashScreen sequence is done
   useEffect(() => {
@@ -90,6 +125,10 @@ const Hero = ({ content }) => {
           opacity: 1,
           x: 0,
         })
+        await pControls.start({
+          opacity: 1,
+          x: 0,
+        })
         // Animate underlining to hover state
         await uControls.start({
           boxShadow: `inset 0 -2rem 0 ${Theme.colors.secondary}`,
@@ -98,12 +137,14 @@ const Hero = ({ content }) => {
       }
     }
     pageLoadSequence()
-  }, [isIntroDone, eControls, gControls, sControls, uControls])
+  }, [isIntroDone, eControls, gControls, sControls, uControls, pControls])
   
   return (
     <StyledSection id="hero">
       {!isIntroDone && <SplashScreen />}
       <StyledContentWrapper>
+
+        <div className="hero-left">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={gControls}>
           <h1 className="title">
             <div className="greetings">
@@ -125,9 +166,18 @@ const Hero = ({ content }) => {
             <MDXRenderer>{body}</MDXRenderer>
           </div>
         </motion.div>
+
         <motion.div initial={{ opacity: 0, x: 20 }} animate={sControls}>
           <Social fontSize=".95rem" padding=".3rem 1.25rem" width="auto" />
         </motion.div>
+        </div>
+
+        <div className="hero-right">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={pControls}>
+          <Img className="profile" fluid={frontmatter.profile.childImageSharp.fluid} />
+          </motion.div>
+        </div>
+
       </StyledContentWrapper>
     </StyledSection>
   )
