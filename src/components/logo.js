@@ -11,8 +11,13 @@ const StyledLogo = styled.div`
   z-index: 13;
 
   font-size: ${({ size }) => (size ? size : "1.75rem")};
-  font-weight: 900;
-  color: ${({ theme, color }) => theme.colors[color] || color };
+  font-weight: 400;
+  font-family: ${({ theme }) => theme.fonts.logo};
+  // color: ${({ theme, color }) => theme.colors[color] || color };
+  color: ${({ theme }) => theme.colors.background};
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 
   /* Disable effects when sidebar is open */
   filter: none !important;

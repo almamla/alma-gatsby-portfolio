@@ -13,9 +13,9 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 31.25rem;
-    background: ${({ theme }) => theme.colors.background};
+    background-color: ${({ theme }) => theme.colors.random};
     a {
-      color: ${({ theme }) => theme.colors.primary};
+      color: ${({ theme }) => theme.colors.background};
     }
   }
   .nav-link {
@@ -30,7 +30,7 @@ const StyledNav = styled.nav`
       height: 0.1563rem;
       content: "";
       position: absolute;
-      background-color: ${({ theme }) => theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.background};
       width: 0%;
       bottom: -0.125rem;
     }
@@ -44,14 +44,14 @@ const StyledNav = styled.nav`
     font-weight: 700;
     border-radius: ${({ theme }) => theme.borderRadius};
     border: 0.125rem solid ${({ theme }) => theme.colors.primary};
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.primary};
     transition: 20ms ease-out;
     font-size: 1rem;
     padding: 0.5rem 1.5rem;
     margin: 0;
     &:hover {
-      background: ${({ theme }) => theme.colors.primary};
-      color: #ffffff;
+      background: ${({ theme }) => theme.colors.background};
+      color: ${({ theme }) => theme.colors.random};
     }
   }
 `

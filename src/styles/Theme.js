@@ -26,6 +26,7 @@ module.exports = {
     // primary: "Roboto, Arial, sans-serif",
     primary: "'Raleway', sans-serif",
     secondary: "'Open Sans', sans-serif",
+    logo: "mostra-nuova, sans-serif",
   },
   borderRadius: "1rem",
   pageWidth: "62.5rem",

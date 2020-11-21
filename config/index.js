@@ -1,13 +1,13 @@
 module.exports = {
 
-    author: "@konstantinmuenster",
-    siteTitle: "Gatsby Starter Portfolio Minimal",
-    siteShortTitle: "Gatsby", // Used as logo text in header, footer, and splash screen
-    siteDescription: "A modern one-page portfolio with a clean yet expressive design.",
+    author: "@almayan",
+    siteTitle: "Alma Yan - Portfolio",
+    siteShortTitle: "a", // Used as logo text in header, footer, and splash screen
+    siteDescription: "Project manager | Film coordinator | Developer",
     siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
     siteLanguage: "en_US",
     siteIcon: "content/favicon.png", // Relative to gatsby-config file
-    seoTitleSuffix: "Portfolio Minimal", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
+    seoTitleSuffix: "Alma Yan", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
 
     splashScreen: false, // Set this to true if you want to use the splash screen
 
@@ -24,31 +24,26 @@ module.exports = {
             url: "https://www.linkedin.com/in/alma-liping-yan-78023b133/"
         },
         {
-            name: "Medium",
+            name: "Grad project",
             url: "https://konstantinmuenster.medium.com/"
         },
         {
-            name: "Github",
+            name: "CV",
             url: "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal"
-        },
-        {
-            name: "Behance",
-            url: "https://www.behance.net/konstanmnster"
         },
     ],
   
     navLinks: {
         menu: [
             {
-                name: "Articles",
-                url: "/#articles",
-            },
-            {
                 name: "About Me",
                 url: "/#about",
             },
+            {   name: "Timeline",
+                url: "/#timeline",
+            },
             {
-                name: "Features",
+                name: "Projects",
                 url: "/#projects",
             },
         ],

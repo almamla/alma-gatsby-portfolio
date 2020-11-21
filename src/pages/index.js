@@ -8,7 +8,7 @@ import Hero from "../components/sections/hero"
 import Articles from "../components/sections/articles"
 import About from "../components/sections/about"
 import Interests from "../components/sections/interests"
-import Projects from "../components/sections/projects"
+import Timeline from "../components/sections/timeline"
 import Contact from "../components/sections/contact"
 import { splashScreen, seoTitleSuffix } from "../../config"
 
@@ -21,11 +21,11 @@ const IndexPage = ({ data }) => {
         title={withSuffix ? `${seoTitle} - ${seoTitleSuffix}` : `${seoTitle}`}
       />
       <Hero content={data.hero.edges} />
-      {/* Articles is populated via Medium RSS Feed fetch */}
-      <Articles />
       <About content={data.about.edges} />
       <Interests content={data.interests.edges} />
-      <Projects content={data.projects.edges} />
+      <Timeline content={data.timeline.edges} />
+       {/* Articles is populated via Medium RSS Feed fetch */}
+       <Articles />
       <Contact content={data.contact.edges} />
     </Layout>
   )
@@ -117,9 +117,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    projects: allMdx(
+    timeline: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/index/projects/" }
+        fileAbsolutePath: { regex: "/index/timeline/" }
         frontmatter: { visible: { eq: "true" } }
       }
       sort: { fields: [frontmatter___position], order: ASC }

@@ -4,7 +4,8 @@ import modernNormalize from "styled-modern-normalize"
 const GlobalStyle = createGlobalStyle`
 
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;500&display=swap');
-    
+    @import url("https://use.typekit.net/ttp7ivr.css");
+
     // Import normalize.css
     ${modernNormalize}
 

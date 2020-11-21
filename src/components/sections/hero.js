@@ -47,9 +47,10 @@ const StyledContentWrapper = styled(ContentWrapper)`
     .hero-right {
       display: hidden;
       @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        width: 12rem;
         // border: yellow 2px solid;
         display:flex;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         margin-right: 4rem
       }
@@ -88,8 +89,8 @@ const StyledContentWrapper = styled(ContentWrapper)`
         border: 3px solid ${({ theme }) => theme.colors.random};
         border-radius: 50%;
         display:flex;
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
       }
     }
   }

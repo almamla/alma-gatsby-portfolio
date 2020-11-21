@@ -141,12 +141,12 @@ const Articles = () => {
 
   return (
     <StyledSection
-      id="articles"
+      id="projects"
       initial={{ opacity: 0, y: 20 }}
       animate={articlesControls}
     >
       <StyledContentWrapper>
-        <h3 className="section-title">What I'm proud of recently</h3>
+        <h3 className="section-title">Projects</h3>
         <div className="articles">
           {articles
             ? articles.map(item => (

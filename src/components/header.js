@@ -14,7 +14,7 @@ import Navbar from "./navbar"
 const StyledHeader = motion.custom(styled.header`
   width: 100%;
   height: ${({ theme }) => theme.headerHeight};
-  background: ${({ theme }) => theme.colors.background};
+  background: ${({ theme }) => theme.colors.random};
 `)
 
 const StyledContentWrapper = styled(ContentWrapper)`
