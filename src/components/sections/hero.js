@@ -86,13 +86,19 @@ const StyledContentWrapper = styled(ContentWrapper)`
     .profile {
      display: hidden;
       @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.16);
         border: 3px solid ${({ theme }) => theme.colors.random};
         border-radius: 50%;
         display:flex;
         width: 8rem;
         height: 8rem;
+        transition: all 0.3s ease-out;
+        &:hover {
+          filter: grayscale(20%) contrast(1) brightness(90%);
+          transform: translate3d(0px, -0.125rem, 0px);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.32);
+        }
       }
-    }
   }
 `
 
@@ -169,7 +175,7 @@ const Hero = ({ content }) => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} animate={sControls}>
-          <Social fontSize=".95rem" padding=".3rem 1.25rem" width="auto" />
+          <Social fontSize=".95rem" padding=".3rem 1.25rem" width="auto" withIcon/>
         </motion.div>
         </div>
 

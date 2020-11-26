@@ -68,6 +68,7 @@ const StyledSocialWrapper = styled.div`
 `
 
 const StyledSocialProfile = styled.a`
+  white-space:nowrap;
   width: ${({ width }) => (width ? width : "auto")};
   height: auto;
   background: ${({ theme }) => theme.colors.background};

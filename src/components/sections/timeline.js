@@ -139,7 +139,7 @@ const StyledProject = styled(motion.div)`
     .category {
       font-size: 0.875rem;
       line-height: 1rem;
-      text-transform: uppercase;
+      // text-transform: uppercase;
       letter-spacing: +1px;
     }
     .title {
@@ -290,7 +290,7 @@ const Timeline = ({ content }) => {
                         <Underlining
                           key={tag}
                           color="secondary"
-                          hoverColor="secondary"
+                          hoverColor="random"
                         >
                           {tag}
                         </Underlining>

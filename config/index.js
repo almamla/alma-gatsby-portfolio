@@ -21,15 +21,15 @@ module.exports = {
     socialMedia: [
         {
             name: "Linkedin",
-            url: "https://www.linkedin.com/in/alma-liping-yan-78023b133/"
+            url: ""
         },
         {
-            name: "Grad project",
-            url: "https://konstantinmuenster.medium.com/"
+            name: "Grad Project",
+            url: ""
         },
         {
             name: "CV",
-            url: "https://github.com/konstantinmuenster/gatsby-starter-portfolio-minimal"
+            url: ""
         },
     ],
   

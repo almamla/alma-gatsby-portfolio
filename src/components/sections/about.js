@@ -51,10 +51,11 @@ const StyledContentWrapper = styled(ContentWrapper)`
     .about-author {
       border-radius: ${({ theme }) => theme.borderRadius};
       box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
-      filter: grayscale(20%) contrast(1) brightness(90%);
+      border: solid 3px ${({ theme }) => theme.colors.random};
+      // filter: grayscale(20%) contrast(1) brightness(90%);
       transition: all 0.3s ease-out;
       &:hover {
-        filter: grayscale(50%) contrast(1) brightness(90%);
+        filter: grayscale(20%) contrast(1) brightness(90%);
         transform: translate3d(0px, -0.125rem, 0px);
         box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.32);
       }
@@ -87,6 +88,17 @@ const About = ({ content }) => {
   return (
     <StyledSection id="about">
       <StyledContentWrapper>
+      <motion.div
+          className="image-content"
+          ref={iRef}
+          initial={{ opacity: 0, x: 20 }}
+          animate={iControls}
+        >
+          <Img
+            className="about-author"
+            fluid={frontmatter.image.childImageSharp.fluid}
+          />
+        </motion.div>
         <motion.div
           className="inner-wrapper"
           ref={tRef}
@@ -97,17 +109,6 @@ const About = ({ content }) => {
           <div className="text-content">
             <MDXRenderer>{body}</MDXRenderer>
           </div>
-        </motion.div>
-        <motion.div
-          className="image-content"
-          ref={iRef}
-          initial={{ opacity: 0, x: 20 }}
-          animate={iControls}
-        >
-          <Img
-            className="about-author"
-            fluid={frontmatter.image.childImageSharp.fluid}
-          />
         </motion.div>
       </StyledContentWrapper>
     </StyledSection>
