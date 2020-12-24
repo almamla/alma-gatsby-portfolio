@@ -8,6 +8,7 @@ import IconBehance from "./behance"
 import IconExternal from "./external"
 import IconGrad from "./grad"
 import IconCv from "./cv"
+import IconCobra from "./cobra"
 
 // Utility function to grab Icons by name
 const Icon = ({ name, color }) => {
@@ -28,6 +29,8 @@ const Icon = ({ name, color }) => {
       return <IconGrad color={color} />
     case "cv":
       return <IconCv color={color} />
+    case "cobra":
+      return <IconCobra color={color} />
     default:
       return null
   }
