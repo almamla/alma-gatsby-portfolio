@@ -11,7 +11,7 @@ const { footerLinks } = Config
 const StyledFooter = styled.footer`
   width: 100%;
   height: ${({ theme }) => theme.footerHeight};
-  background: ${({ theme }) => theme.colors.primary};
+  background: ${({ theme }) => theme.colors.random};
   margin-top: 10rem;
 `
 
@@ -37,7 +37,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
 const StyledLink = styled(Link)`
   font-size: 0.875rem;
   font-weight: 700;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   color: #ffffff;
   letter-spacing: 1px;
 `
@@ -49,9 +49,11 @@ const Footer = () => (
         <Logo color="white" size="1.5rem" />
       </Link>
       <div className="footer-links">
-        {footerLinks.map(({ name, url }, key) => (
+        {/* {footerLinks.map(({ name, url }, key) => (
           <StyledLink key={key} to={url}>{name}</StyledLink>
-        ))}
+        ))} */}
+        Copyright &copy; {new Date().getFullYear()} Alma Yan
+
       </div>
     </StyledContentWrapper>
   </StyledFooter>

@@ -42,11 +42,20 @@ const StyledContentWrapper = styled(ContentWrapper)`
         margin-bottom: 3rem;
       }
       .avatar {
+        border: 2px solid ${({ theme }) => theme.colors.random};
         width: 100%;
         max-width: 8.75rem;
         border-radius: 50%;
         margin-right: 4rem;
         margin-bottom: 2rem;
+        box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.16);
+        transition: all 0.3s ease-out;
+        filter: grayscale(20%) contrast(1) brightness(90%);
+        &:hover {
+          filter: grayscale(0%) contrast(1) brightness(100%);
+          transform: translate3d(0px, -0.125rem, 0px);
+          box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.32);
+        }
         @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
           margin-bottom: 0;
         }
