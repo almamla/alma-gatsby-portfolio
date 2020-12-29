@@ -93,8 +93,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
         width: 8rem;
         height: 8rem;
         transition: all 0.3s ease-out;
+        filter: grayscale(20%) contrast(1) brightness(90%);
         &:hover {
-          filter: grayscale(20%) contrast(1) brightness(90%);
+          filter: grayscale(0%) contrast(1) brightness(100%);
           transform: translate3d(0px, -0.125rem, 0px);
           box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.32);
         }
@@ -180,9 +181,9 @@ const Hero = ({ content }) => {
         </div>
 
         <div className="hero-right">
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={pControls}>
+          {/* <motion.div initial={{ opacity: 0, x: 20 }} animate={pControls}>
           <Img className="profile" fluid={frontmatter.profile.childImageSharp.fluid} />
-          </motion.div>
+          </motion.div> */}
         </div>
 
       </StyledContentWrapper>

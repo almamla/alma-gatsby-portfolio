@@ -143,20 +143,31 @@ const StyledProject = styled(motion.div)`
       letter-spacing: +1px;
     }
     .title {
+      display: flex;
+      align-items: center;
       margin-top: 0.625rem;
       margin-bottom: 0.625rem;
       font-size: 1.375rem;
       line-height: 1.625rem;
       font-weight: 700;
+      text-transform: none;
     }
     .tags {
       display: flex;
       flex-wrap: wrap;
       margin-top: 1.5rem;
       line-height: 1.2rem;
+      color: ${({ theme }) => theme.colors.random};
       span {
         margin-right: 1rem;
         margin-bottom: 1rem;
+      }
+    }
+    .logo {
+      margin-right: 0.5rem;
+      transition: all 0.3s ease-out;
+      &:hover {
+        transform: translate3d(0px, -0.125rem, 0px);
       }
     }
     .links {
@@ -167,36 +178,63 @@ const StyledProject = styled(motion.div)`
       margin-top: 1rem;
       a {
         display: inline-block;
-        margin-right: 2rem;
+        margin-right: 1.5rem;
       }
-      svg {
-        width: 1.3rem;
-        height: 1.3rem;
+      .icon {
+        // border: red solid 1px;
+        padding: 1px;
+
+        // width: 1.3rem;
+        // height: 1.3rem;
         transition: all 0.3s ease-out;
+        filter: grayscale(100%) contrast(1) brightness(90%);
       }
-      svg:hover {
-        fill: ${({ theme }) => theme.colors.primary};
+      .icon:hover {
+        filter: grayscale(0%) contrast(1) brightness(100%);
       }
     }
   }
+
   .screenshot {
-    width: 100%;
-    max-width: 25rem;
-    height: 15rem;
-    border-radius: ${({ theme }) => theme.borderRadius};
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
     box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
     transition: all 0.3s ease-out;
+    filter: grayscale(20%) contrast(1) brightness(90%);
+  }
+  .screenshot-container {
+    // overflow: hidden;
+    max-width: 25rem;
+    height: 15rem;
+    position: relative;
+    width: 100%;
+    border-radius: ${({ theme }) => theme.borderRadius};
+    transition: all 0.3s ease-out;
+    &:hover .screenshot {
+      filter: grayscale(0%) contrast(1) brightness(100%);
+      box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.32);
+    }
+    &:hover ${Underlining} {
+      box-shadow: inset 0 -1rem 0 ${({ theme }) => theme.colors.random};
+    }
     &:hover {
       transform: translate3d(0px, -0.125rem, 0px);
-      box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.32);
     }
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
       height: 18.75rem;
     }
   }
+  .name {
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    color: ${({ theme }) => theme.colors.background}; 
+    font-weight: 500;
+  }
 `
 
-const Timeline = ({ content }) => {
+const Timeline = ({ content, interests }) => {
   const sectionDetails = content[0].node
   const timeline = content.slice(1, content.length)
 
@@ -280,31 +318,60 @@ const Timeline = ({ content }) => {
                   }
                 >
                   <div className="details">
-                    <div className="category">
-                      {frontmatter.emoji} {frontmatter.category}
+                    <div className="title">
+                      <a
+                       href={frontmatter.logoLink}
+                       target="_blank"
+                       rel="nofollow noopener noreferrer"
+                       aria-label="External Link">
+                        <Img className="logo" fixed={frontmatter.logo.childImageSharp.fixed} />
+                       </a>
+                      {frontmatter.title}
                     </div>
-                    <div className="title">{frontmatter.title}</div>
+                    <div className="category">
+                      {/* {frontmatter.emoji} */}
+                       {frontmatter.category}
+                    </div>
                     <MDXRenderer>{body}</MDXRenderer>
                     <div className="tags">
                       {frontmatter.tags.map(tag => (
-                        <Underlining
-                          key={tag}
-                          color="secondary"
-                          hoverColor="random"
-                        >
-                          {tag}
-                        </Underlining>
+                        <span key={tag}>
+                        {tag}
+                        </span>
+                        // <Underlining
+                        //   key={tag}
+                        //   color="secondary"
+                        //   hoverColor="random"
+                        // >
+                        //   {tag}
+                        // </Underlining>
                       ))}
                     </div>
                     <div className="links">
-                      {frontmatter.github && (
+                      {frontmatter.icons.map((icon, i) => {
+                        return (
+                            <a
+                            href={frontmatter.iconLinks[i]}
+                            target="_blank"
+                            rel="nofollow noopener noreferrer"
+                            aria-label="External Link"
+                            key={icon}
+                          >
+                          <Img className="icon" fixed={icon.childImageSharp.fixed} />
+                          </a>
+  
+                        )
+                      }
+                      )
+                      }
+                      {/* {frontmatter.github && (
                         <a
                           href={frontmatter.github}
                           target="_blank"
                           rel="nofollow noopener noreferrer"
                           aria-label="External Link"
                         >
-                          <Icon name="github" color="#888888" />
+                          <Icon name={frontmatter.iconname} color="#888888" />
                         </a>
                       )}
                       {frontmatter.external && (
@@ -316,17 +383,30 @@ const Timeline = ({ content }) => {
                         >
                           <Icon name="external" color="#888888" />
                         </a>
-                      )}
+                      )} */}
                     </div>
                   </div>
-                  {/* If image in viewport changes, update state accordingly */}
+                  {/* If image in viewport changes, update state accordingly */}  
+                
                   <VisibilitySensor
                     onChange={() => setVisibleProject(frontmatter.position)}
                   >
+                    <a className="screenshot-container"
+                    href={frontmatter.screenshotLink}
+                    target="_blank"
+                    rel="nofollow noopener noreferrer"
+                    aria-label="External Link"
+                    >
                     <Img
                       className="screenshot"
                       fluid={frontmatter.screenshot.childImageSharp.fluid}
-                    />
+                    /> 
+                    <span className="name">
+                      <Underlining color="secondary" hoverColor="secondary">
+                          {frontmatter.screenshotName}
+                    </Underlining>
+                    </span>
+                    </a>
                   </VisibilitySensor>
                 </StyledProject>
               </VisibilitySensor>
@@ -350,6 +430,7 @@ const Timeline = ({ content }) => {
         </Button>
       </motion.a>
       )}
+
     </StyledSection>
   )
 }

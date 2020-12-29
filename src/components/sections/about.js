@@ -45,17 +45,17 @@ const StyledContentWrapper = styled(ContentWrapper)`
       margin-top: 4rem;
       margin-left: 0;
       @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-        margin-left: 2rem;
+        margin-right: 2rem;
       }
     }
     .about-author {
       border-radius: ${({ theme }) => theme.borderRadius};
       box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.16);
       border: solid 3px ${({ theme }) => theme.colors.random};
-      // filter: grayscale(20%) contrast(1) brightness(90%);
+      filter: grayscale(20%) contrast(1) brightness(90%);
       transition: all 0.3s ease-out;
       &:hover {
-        filter: grayscale(20%) contrast(1) brightness(90%);
+        filter: grayscale(0%) contrast(1) brightness(100%);
         transform: translate3d(0px, -0.125rem, 0px);
         box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.32);
       }

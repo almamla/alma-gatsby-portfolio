@@ -5,7 +5,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
-import Articles from "../components/sections/articles"
+import Projects from "../components/sections/projects"
 import About from "../components/sections/about"
 import Interests from "../components/sections/interests"
 import Timeline from "../components/sections/timeline"
@@ -23,9 +23,9 @@ const IndexPage = ({ data }) => {
       <Hero content={data.hero.edges} />
       <About content={data.about.edges} />
       <Interests content={data.interests.edges} />
-      <Timeline content={data.timeline.edges} />
+      <Timeline content={data.timeline.edges}/>
        {/* Articles is populated via Medium RSS Feed fetch */}
-       <Articles />
+      <Projects content={data.projects.edges}/>
       <Contact content={data.contact.edges} />
     </Layout>
   )
@@ -129,6 +129,15 @@ export const pageQuery = graphql`
           body
           frontmatter {
             title
+            company
+            logo {      
+              childImageSharp {
+              fixed(width: 50, quality: 90) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+            }
+            logoLink
             category
             emoji
             external
@@ -140,7 +149,17 @@ export const pageQuery = graphql`
                 }
               }
             }
+            screenshotName
+            screenshotLink
             tags
+            icons {
+              childImageSharp {
+                fixed(width: 30, quality: 100) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
+            iconLinks
             position
             buttonVisible
             buttonUrl
@@ -149,6 +168,33 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    projects: allMdx(
+      filter: { 
+        fileAbsolutePath: { regex: "/index/projects/" } }
+        sort: { fields: [frontmatter___position], order: ASC }
+    ) {
+      edges {
+        node {
+          body
+          frontmatter {
+            name
+            overview
+            link
+            image {
+              childImageSharp {
+                fluid(maxWidth: 400, quality: 90) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            position
+            title
+          }
+        }
+      }
+    }
+  
     contact: allMdx(
       filter: { fileAbsolutePath: { regex: "/index/contact/" } }
     ) {

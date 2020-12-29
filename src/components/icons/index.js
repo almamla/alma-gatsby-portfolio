@@ -8,7 +8,7 @@ import IconBehance from "./behance"
 import IconExternal from "./external"
 import IconGrad from "./grad"
 import IconCv from "./cv"
-import IconCobra from "./cobra"
+import IconTree from "./tree"
 
 // Utility function to grab Icons by name
 const Icon = ({ name, color }) => {
@@ -29,8 +29,8 @@ const Icon = ({ name, color }) => {
       return <IconGrad color={color} />
     case "cv":
       return <IconCv color={color} />
-    case "cobra":
-      return <IconCobra color={color} />
+    case "linktree":
+      return <IconTree color={color} />
     default:
       return null
   }
