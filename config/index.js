@@ -29,7 +29,7 @@ module.exports = {
         },
         {
             name: "CV",
-            url: ""
+            url: "https://drive.google.com/file/d/1XTjh5ZMplgwwHYLGds88X88uutR3ILkJ/view?usp=sharing"
         },
     ],
   

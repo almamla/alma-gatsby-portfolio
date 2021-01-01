@@ -158,7 +158,8 @@ const Interests = ({ content }) => {
               initial={{ opacity: 0, scaleY: 0 }}
               animate={iControls}
             >
-                <Img className="icon" fixed={icon.childImageSharp.fixed} /> {name}
+                {/* <Img className="icon" fixed={icon.childImageSharp.fixed} />  */}
+                {name}
             </motion.div>
           ))}
           {shownInterests < interests.length && (
