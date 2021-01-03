@@ -18,6 +18,7 @@ import Underlining from "../../styles/Underlining"
 const StyledSection = motion.custom(styled.section`
   width: 100%;
   height: auto;
+  overflow-x: hidden;
   background: ${({ theme }) => theme.colors.background};
 `)
 

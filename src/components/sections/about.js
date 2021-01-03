@@ -44,8 +44,12 @@ const StyledContentWrapper = styled(ContentWrapper)`
       max-width: 18rem;
       margin-top: 4rem;
       margin-left: 0;
+      margin-right: 0;
       @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
         margin-right: 2rem;
+      }
+      @media (max-width: ${({ theme }) => theme.breakpoints.xs}) {
+        margin-bottom: 2rem;
       }
     }
     .about-author {
