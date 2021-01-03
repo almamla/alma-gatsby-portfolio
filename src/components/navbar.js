@@ -13,7 +13,8 @@ const StyledNav = styled.nav`
     justify-content: space-between;
     align-items: center;
     width: 31.25rem;
-    background-color: ${({ theme }) => theme.colors.random};
+    // background-color: ${({ theme }) => theme.colors.random};
+    background-color: none;
     a {
       color: ${({ theme }) => theme.colors.background};
     }
