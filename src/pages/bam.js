@@ -17,6 +17,7 @@ const StyledSection = styled.section`
   }
   h2 {
     font-size: 1.25rem;
+    color: ${({ theme }) => theme.colors.random};
   }
   h3 {
     font-size: 1rem;
