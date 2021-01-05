@@ -245,7 +245,7 @@ const Projects = ({ content }) => {
             return (
                 <a
                 href={frontmatter.link}
-                target="_blank"
+                // target="_blank"
                 rel="nofollow noopener noreferrer"
                 title={frontmatter.name}
                 aria-label={frontmatter.link}

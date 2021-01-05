@@ -154,7 +154,7 @@ export const pageQuery = graphql`
             tags
             icons {
               childImageSharp {
-                fixed(width: 30, quality: 100) {
+                fixed(height: 25, quality: 100) {
                   ...GatsbyImageSharpFixed
                 }
               }

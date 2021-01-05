@@ -1,8 +1,8 @@
 
 //generate random color
-
-const almaColors = ["FFC700", "0FA958", "5551FF", "F24E1E", "A259FF", "4a459c", "ff2281", "FDF200", "00FECA", "13CA91"]
-let randomNumber = Math.floor(Math.random() * 10); 
+//yellow green blue orange purple cv pink neon green green
+const almaColors = ["FFC700", "0FA958", "5551FF", "F24E1E", "A259FF", "4a459c", "ff2281", "00FECA", "13CA91", ]
+let randomNumber = Math.floor(Math.random() * 9); 
 let randomColor = "#" + almaColors[randomNumber]
 
 // let randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
@@ -15,6 +15,7 @@ module.exports = {
     tertiary: "#F2F2F2",
     text: "#000000",
     background: "#ffffff",
+    // random: "#FEA0FE"
     random: randomColor,
   },
   breakpoints: {

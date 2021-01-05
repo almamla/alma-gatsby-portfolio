@@ -1,13 +1,13 @@
 module.exports = {
 
     author: "@almayan",
-    siteTitle: "Alma Yan - Portfolio",
+    siteTitle: "alma yan - portfolio",
     siteShortTitle: "🥳", // Used as logo text in header, footer, and splash screen
-    siteDescription: "Project manager | Film coordinator | Developer",
-    siteUrl: "https://gatsby-starter-portfolio-minimal.netlify.app/",
+    siteDescription: "media production graduate with experience in project management, web design, and film technology",
+    siteUrl: "https://alma-portfolio.netlify.app/",
     siteLanguage: "en_GB",
     siteIcon: "content/favicon.png", // Relative to gatsby-config file
-    seoTitleSuffix: "Alma Yan", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
+    seoTitleSuffix: "alma yan", // SEO title syntax will be e.g. "Imprint - {seoTitleSuffix}"
 
     splashScreen: false, // Set this to true if you want to use the splash screen
 
