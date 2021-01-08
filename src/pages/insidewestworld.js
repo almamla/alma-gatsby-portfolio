@@ -17,19 +17,20 @@ const StyledSection = styled.section`
   }
   h2 {
     font-size: 1.25rem;
-    color: ${({ theme }) => theme.colors.random}'
+    color: ${({ theme }) => theme.colors.random};
   }
   h3 {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
   .videoWrapper {
+    margin-top: 1rem;
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;
+    margin-top: 2rem;
   }
   .videoWrapper iframe {
-    margin-top: 1rem;
     position: absolute;
     top: 0;
     left: 0;

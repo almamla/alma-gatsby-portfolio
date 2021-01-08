@@ -46,8 +46,8 @@ const StyledContentWrapper = styled(ContentWrapper)`
       overflow-x: scroll;
       overflow-y: hidden;
       -webkit-overflow-scrolling: touch;
-      margin: -2rem 0 0 0;
-      padding: 0 2rem;
+      margin: -2rem 1rem 0 -2rem;
+      padding: 0 1rem;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -118,7 +118,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
       width: 16.25rem;
       height: 12rem;
       // padding: 3rem;
-      margin: 2rem 1rem;
+      margin: 2rem;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.16);
       border-radius: ${({ theme }) => theme.borderRadius};
       // transition: box-shadow 0.3s ease-out;
