@@ -49,6 +49,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
         padding-left: 0;
       }
     }
+    p {
+      text-transform: none;
+    }
     .projects {
       display: flex;
       flex-direction: row;

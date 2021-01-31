@@ -27,6 +27,9 @@ const StyledContentWrapper = styled(ContentWrapper)`
       flex-direction: row;
       justify-content: space-between;
     }
+    p {
+      text-transform: none;
+    }
     .section-title {
       margin-bottom: 2rem;
     }
