@@ -12,6 +12,9 @@ const StyledSection = styled.section`
   padding: 0 2.5rem;
   height: auto;
   background: ${({ theme }) => theme.colors.background};
+  p {
+    text-transform: none;
+  }
   h1 {
     font-size: 1.5rem;
   }
