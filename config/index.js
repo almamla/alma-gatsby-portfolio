@@ -30,7 +30,7 @@ module.exports = {
         {
             name: "CV",
             // url: "https://drive.google.com/file/d/1riIGU925XKAbgg4vVbqfClymGnLdW3xj/view?usp=sharing"
-            url: "https://www.dropbox.com/s/tqlrrkg5f8ey4qj/AlmaYan-CV.pdf?dl=0"
+            url: "https://www.dropbox.com/s/tgzi9v36vfsk1s5/AlmaYan-CV.pdf?dl=0"
         },
     ],
   
