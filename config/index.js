@@ -24,7 +24,7 @@ module.exports = {
             url: "https://www.linkedin.com/in/alma-liping-yan-78023b133/"
         },
         {
-            name: "Linktree",
+            name: "Work",
             url: "https://linktr.ee/lipingyan"
         },
         {

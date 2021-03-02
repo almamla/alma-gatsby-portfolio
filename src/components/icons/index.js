@@ -29,7 +29,7 @@ const Icon = ({ name, color }) => {
       return <IconGrad color={color} />
     case "cv":
       return <IconCv color={color} />
-    case "linktree":
+    case "work":
       return <IconTree color={color} />
     default:
       return null

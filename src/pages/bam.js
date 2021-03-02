@@ -62,8 +62,8 @@ const Bam = () => {
         <StyledContentWrapper>
           <h1>Bournemouth Aviation Museum</h1>
           <h2>Media Solution</h2>
-          <p>Acting as a media agency, me and my university group worked towards a breif given by rea-life clients at Bournemouth Aviation Museum (BAM) to bring awareness to the museum.</p>
-          <p>To our clients' satisfaction, we provided a media solution comprising of a sleek website, two promotional videos (below), and improved social media engagement.</p>
+          <p>Acting as a media agency, me and my university group worked towards a breif given by Bournemouth Aviation Museum to bring awareness to the attraction.</p>
+          <p>To our clients' satisfaction, we provided a media solution comprising of a website, two promotional videos (below), and improved social media engagement.</p>
           <p>I was the content producer of the team and took main responsibility for the website, audio recording and social media elements.</p>
           <div className="videoWrapper">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/VEFHeh0g-0Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

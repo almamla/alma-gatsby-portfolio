@@ -63,8 +63,8 @@ const Insidewestworld = () => {
         <StyledContentWrapper>
           <h1>inside westworld</h1>
           <h2>video essay</h2>
-          <p>A video essay on the TV series Westworld: exploring its relationship with ideology and authenticity.</p>
-          <p>I worked independently on this university project: researching, narrating, editing.</p>
+          <p>A video essay on the HBO TV series Westworld: exploring its relationship with ideology and authenticity.</p>
+          <p>I worked independently on this university project, juggling researching, writing, narrating, and editing.</p>
           <div className="videoWrapper">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/rMjJXmMh-2I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
