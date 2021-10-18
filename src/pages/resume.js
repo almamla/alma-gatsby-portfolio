@@ -1,6 +1,4 @@
 import React from "react"
-import resumefile from "../../content/almayan-cv.pdf"
-import cvmockup from "../../content/cv-mockup.png"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -59,8 +57,8 @@ const ResumePage = () => (
     <SEO title="Alma Yan | CV" meta={[{ name: 'robots', content: 'noindex'}]} />
     <StyledSection>
       <StyledContentWrapper>
-        <a href={resumefile} download>download cv</a>
-        <img src = {cvmockup} className ="imageContainer" ></img>
+        {/* <a href={resumefile} download>download cv</a>
+        <img src = {cvmockup} className ="imageContainer" ></img> */}
       </StyledContentWrapper>
       
     </StyledSection>
