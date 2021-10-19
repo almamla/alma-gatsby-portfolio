@@ -2,7 +2,7 @@ module.exports = {
 
     author: "@almayan",
     siteTitle: "alma yan - tech/media project manager",
-    siteShortTitle: "🥳", // Used as logo text in header, footer, and splash screen
+    siteShortTitle: "👩‍💻", // Used as logo text in header, footer, and splash screen
     siteDescription: "media production graduate with experience in project management, web design, and film technology",
     siteUrl: "https://lipingyan.com/",
     siteLanguage: "en_GB",
