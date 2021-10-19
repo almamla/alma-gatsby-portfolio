@@ -29,9 +29,10 @@ module.exports = {
         },
         {
             name: "CV",
+            url: "https://indd.adobe.com/view/07f5de88-53cc-4c52-a6b4-8e5858f6a9cb"
             // url: "https://drive.google.com/file/d/1riIGU925XKAbgg4vVbqfClymGnLdW3xj/view?usp=sharing"
             //url: "https://www.dropbox.com/s/tgzi9v36vfsk1s5/AlmaYan-CV.pdf?dl=0"
-            url: "https://www.dropbox.com/s/t92ivbz33thet4y/AlmaYan-CV.pdf?dl=0"
+           // url: "https://www.dropbox.com/s/t92ivbz33thet4y/AlmaYan-CV.pdf?dl=0"
         },
     ],
   
