@@ -1,9 +1,9 @@
 module.exports = {
 
     author: "@almayan",
-    siteTitle: "alma yan - tech/media project manager",
+    siteTitle: "alma yan - portfolio",
     siteShortTitle: "👩‍💻", // Used as logo text in header, footer, and splash screen
-    siteDescription: "media production graduate with experience in project management, web design, and film technology",
+    siteDescription: "Multi-tasker, technical problem solver, organiser, with a passion in film & storytelling.",
     siteUrl: "https://lipingyan.com/",
     siteLanguage: "en_GB",
     siteIcon: "content/favicon.png", // Relative to gatsby-config file
